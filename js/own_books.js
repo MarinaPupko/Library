@@ -7,10 +7,12 @@ const cvc = document.getElementById("cvc");
 const cardholder_name = document.getElementById("cardholder_name");
 const postal_code = document.getElementById("postal_code");
 const place_code = document.getElementById("place_code");
+const name_reader = document.getElementById("name_reader");
 
 const buy_card_button = document.getElementById("buy_card_button");
 
 const library_card = document.getElementById("library_card");
+const card_number = document.getElementById("card_number");
 const library_card_authorized = document.getElementById("library_card_authorized")
 
 var bank_card_number_value = '';
@@ -72,7 +74,8 @@ function register_card(){
       background.classList.remove("active_blur");
       library_card.style.display ='none';
       library_card_authorized.style.display = 'flex';
-
+      name_reader.value = cardholder_name_value;
+      card_number.value = Math.floor(Math.random()*10000000);
   }
 }
 
